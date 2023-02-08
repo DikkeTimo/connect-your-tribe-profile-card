@@ -3,7 +3,7 @@ import express from "express";
 
 console.log(fetch);
 
-const url = "https://whois.fdnd.nl/api/v1/member/dikke-timo";
+const url = "https://whois.fdnd.nl/api/v1/member/dikketimo";
 const data = await fetch(url).then((response) => response.json());
 
 console.log(data);
