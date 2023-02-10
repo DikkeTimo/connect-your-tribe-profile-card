@@ -1,12 +1,11 @@
 // Importeer express uit de node_modules map
 import express from "express";
 
-console.log(fetch);
-
+// Haalt data van de api
 const url = "https://whois.fdnd.nl/api/v1/member/dikketimo";
 const data = await fetch(url).then((response) => response.json());
+// await is het wachten van de fetch voordat js verder gaat
 
-console.log(data);
 // Maak een nieuwe express app aan
 const app = express();
 

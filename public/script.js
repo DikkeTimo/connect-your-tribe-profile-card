@@ -1,5 +1,5 @@
 let card = document.querySelector(".card");
-let svg = document.querySelector("svg");
+let svg = document.querySelector("#button");
 
 svg.addEventListener("click", toggle);
 

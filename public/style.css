@@ -9,7 +9,12 @@
 :root {
   --background-color: #001524;
   --background-color-two: #d6d6d6;
-  --card-colour: #cf4325;
+  --card-colour: linear-gradient(
+    90deg,
+    rgba(91, 87, 149, 1) 0%,
+    rgba(207, 67, 37, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   --card-colour-two: #15616d;
   --card-colour-three: #9381ff;
 }
@@ -49,7 +54,7 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: var(--card-colour);
+  background: var(--card-colour);
   border-radius: 0.6rem;
   overflow: hidden;
   perspective: 1500px;
@@ -78,7 +83,7 @@ body {
 .marquee {
   color: var(--background-color-two);
   display: inline-block;
-  animation: to-the-left 20s linear infinite;
+  animation: to-the-left 30s linear infinite;
   text-align: center;
   white-space: nowrap;
   padding-left: 100%;
@@ -92,22 +97,59 @@ body {
 }
 
 .logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: var(--background-color-two);
   font-size: 3rem;
-  transform: rotate(50deg);
-  margin-top: 12rem;
+  margin-right: 0.5rem;
+  white-space: pre-wrap;
+  text-align: right;
 }
 
-.logo span {
-  color: #fff;
-  white-space: nowrap;
+.coding {
+  display: flex;
+  justify-content: space-around;
 }
 
-svg {
+.html,
+.css,
+.js {
+  transition: 0.5s;
+}
+
+.html:hover,
+.css:hover,
+.js:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.bio_open {
+  width: 60%;
+  height: 25vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: #001524;
+  border-radius: 0.6rem;
+}
+
+.bio {
+  position: absolute;
+  color: var(--background-color-two);
+  background-color: #15616d;
+  border-radius: 0.6rem;
+  width: 60%;
+  height: 25vh;
+  overflow-y: scroll;
+  padding: 0.5rem;
+}
+
+#button {
   width: 60vw;
   transition: 0.5s;
 }
 
-svg:hover {
+#button:hover {
   scale: 1.2;
   transition: 0.5s;
 }
